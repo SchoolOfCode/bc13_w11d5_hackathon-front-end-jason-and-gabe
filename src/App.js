@@ -1,6 +1,6 @@
 import './App.css';
-import { useState, useContext, useEffect } from 'react';
-import { AgeContext } from './AgeContext.js';
+import { useState, useEffect } from 'react';
+// import { AgeContext } from './AgeContext.js';
 
 
 const url = process.env.REACT_APP_BACKEND_URL ?? "http://localhost:3000";
@@ -39,9 +39,11 @@ function App() {
     );
   }
 
+  const [isLarge, setIsLarge] = useState(false);
+  const imageSize = isLarge ? 150 : 100;
 
   function ToyImage({ props }) {
-    const imageSize = useContext(AgeContext);
+    // const imageSize = useContext(AgeContext);
     console.log(props)
     return (
       <img
@@ -55,8 +57,6 @@ function App() {
 
 
 
-  const [isLarge, setIsLarge] = useState(false);
-  const imageSize = isLarge ? 150 : 100;
 
   return (
     // <AgeContext.Provider
