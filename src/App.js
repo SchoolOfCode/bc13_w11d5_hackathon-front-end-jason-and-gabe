@@ -28,7 +28,6 @@ function App() {
     );
     return <ul>{toyItems}</ul>;
   }
-  
 
   function ToyItem({ props }) {
     return (
