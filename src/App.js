@@ -6,7 +6,7 @@ import { AgeContext } from './AgeContext.js';
 const url = process.env.REACT_APP_BACKEND_URL ?? "http://localhost:3000";
 
 
-export default function App() {
+function App() {
   const [toysList, setToysList] = useState([]);
   
 
@@ -83,5 +83,4 @@ export default function App() {
 }
 
 
-
-
+export default App;
